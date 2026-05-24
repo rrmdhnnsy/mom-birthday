@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Mom!</title>
+    <style>
+        @font-face {
+            font-family: 'HeadingFont';
+            src: url('Hamilton Archive Script.otf') format('opentype');
+        }
+    
+        @font-face {
+            font-family: 'BodyFont';
+            src: url('Oceanside Typewriter.ttf') format('truetype');
+        }
+
+        body {
+            background-color: #FBEFEF;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-family: 'HeadingFont', cursive;
+            font-size: 60px;
+            color: #593737;
+            margin-top: 10px;
+            margin-bottom: 80px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .envelope {
+            width: 330px;
+            height: 180px;
+            background: #FFCDC9;
+            position: relative;
+            margin: 5px auto;
+            cursor: pointer;
+            border-radius: 6px;
+            overflow: visible;
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+        
+        .flower-meaning {
+            margin-top: 40px;
+            color: #cc8888;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            background: #FDACAC;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+            transform-origin: top;
+            transition: transform 0.6s ease;
+            z-index: 3;
+
+            backface-visibility: visible;
+        }
+
+        .envelope.open .flap {
+            transform: rotateX(-140deg);
+        }
+
+        .letter {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 85%);
+            width: 600px;
+            padding: 15px;
+            background:
+            repeating-linear-gradient(
+            to bottom,
+            #fffaf0,
+            #fffaf0 24px,
+            #e6d5b8 25px
+            );
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            opacity: 0; 
+            transition: transform 0.8s ease, opacity 0.5s ease;
+            z-index: 2;
+        }
+
+        .letter {
+            text-align: left;
+            font-family: 'HeadingFont', cursive;
+        }
+        
+        .letter h3 {
+            font-family: 'HeadingFont', cursive;
+            font-size: 45px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        
+        .letter p {
+            font-family: 'BodyFont', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .envelope.show-letter .letter {
+            transform: translate(-50%, 90%);
+            opacity: 1;
+        }
+
+        .flower-meaning {
+            margin-top: 1100px;
+            color: #cc8888;
+            font-style: italic;
+            font-size: 14px;
+
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            transform: 0.5s ease;
+        }
+
+        .hide-flowers {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .flower {
+            position: fixed;
+            font-size: 26px;
+            opacity: 0.7;
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .f1 { top: 10%; left: 5%; scale: 1.3; }
+        .f2 { top: 10%; right: 8%; scale: 1.3; }
+        .f3 { bottom: 10%; left: 10%; scale: 1.3; }
+        .f4 { bottom: 10%; right: 12%; scale: 1.3; }
+        .f5 { top: 50%; left: 2%; scale: 1.3; }
+        .f6 { top: 50%; right: 3%; scale: 1.3; }
+        
+        @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+
+        .memory-btn {
+            display: inline-block;
+           margin-top: 30px;
+           padding: 10px 20px;
+           background-color: #F5AFAF;
+           color: white;
+           text-decoration: none;
+           border-radius: 20px;
+           font-family: 'BodyFont', sans-serif;
+           transition: transform 0.2s ease;
+        }
+
+        .memory-btn:hover {
+          transform: scale(1.05);
+        }
+
+</style>
+
+<body>
+
+<h1>꒰ Happy Birthday Mom ꒱</h1>
+
+<div class="flower f1">🌹</div>
+<div class="flower f2">🌸</div>
+<div class="flower f3">🌺</div>
+<div class="flower f4">🪷</div>
+<div class="flower f5">🌷</div>
+<div class="flower f6">🌼</div>
+
+<div class="envelope" onclick="openLetter(this)">
+    
+    <div class="flap"></div>
+
+    <div class="letter">
+        
+        <h3>Dear Mom,</h3>
+
+        <p>There’s honestly so much I want to write to you, but I think I should start with how grateful I am. </p>
+
+        <p>Thank you so much for always being there for me, even when it’s hard. Thank you for being the anchor to my ship, the one who grounds me when I start to spiral with my insecurities and tendency to overthink.</p>
+
+        <p>We’re so much alike, and maybe that’s a little scary to think about. But maybe, because of that, I feel like I can understand you, even when nothing is said out loud. But who knows, maybe that’s just my overthinking again. After all, I know I can never fully understand exactly how you feel.</p>
+
+        <p>But just in case, I want you to know this. Your presence matters so much to us, your family. We love and care about you so, so, sooo much, even if we don’t say it enough. Without you, our lives wouldn’t be the same. Mine wouldn’t be the same. It would be so much emptier without you in it.</p>
+
+        <p>You’ve told me so many times that I’m a miracle given by god to you, but I still can’t fully comprehend that. Because to me, you are the miracle. You are the one who is strong enough to endure everything and still laugh and smile at me. You are the one who still believes in me, even after all of my breakdowns and worries..</p>
+    
+        <p>I know there are things in your life that have been weighing on you, and I’m sorry I haven’t always noticed or given you the comfort you deserve.</p>
+
+        <p>There’s still so much I don’t know about you or your life, but one thing I know is this: You are my home and my comfort. </p>
+    
+        <p>I’m sorry I can’t just say this out loud to you, because I know I would end up choking on my words as I read it aloud and end up a crying mess.</p>
+
+        <p>Today, let’s celebrate you, your life, your strength, everything that makes you *you*. May your days be filled with light and happiness.</p>
+
+        <p><strong>Happy birthday to the heart of the family.</strong></p>
+
+        <p>With so much love,<br>Syifa ❤︎</p>
+
+        <p>P.S. maaf yaa ini fully pake bahasa inggris soalnya aku merasa lebih bisa menyampaikan isi hati kalau pake bahasa inggris hehe</p>
+    
+    </div>
+</div>
+
+<p class="flower-meaning">
+    🌹 For your love <br>
+    🌸 For your beauty <br>
+    🌷 For your kindness <br>
+    🌼 For your light <br>
+    🌺 For your grace <br>
+    🪷 For your strength
+</p>
+
+<a href="gallery.html" class="memory-btn">click here to see our memories!! ➝</a>
+
+<script>
+function openLetter(el) {
+    el.classList.add("open");
+
+    const flowers = document.querySelector(".flower-meaning");
+
+    flowers.classList.add("hide-flowers");
+
+    setTimeout(() => {
+        el.classList.add("show-letter");
+    }, 500);
+
+    setTimeout(() => {
+        flowers.classList.remove("hide-flowers");
+    }, 1500);
+}
+</script>
+
+</body>
+</html>
